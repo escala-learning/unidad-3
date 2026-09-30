@@ -1,0 +1,50 @@
+      <header class="ova-screen__head" data-reveal>
+        <div class="ova-screen__eyebrow">Fuentes académicas</div>
+        <h1 class="ova-screen__title">Referencias</h1>
+      </header>
+
+      <!-- Literal del DI §Referencias; solo llevan enlace las que el DI trae con DOI -->
+      <div class="sl-referencias" data-reveal>
+        <p><span class="sl-ref__firma">Apache Software Foundation. (s. f.).</span> Apache Atlas documentation. Consultado el 21 de septiembre de 2026. <a class="sl-ref__url" href="https://atlas.apache.org/2.3.0/index.html" target="_blank" rel="noopener">https://atlas.apache.org/2.3.0/index.html</a></p>
+        <p><span class="sl-ref__firma">DAMA International. (2024).</span> The DAMA-DMBOK 2.0 revised edition: Data management body of knowledge. Technics Publications.</p>
+        <p><span class="sl-ref__firma">LexLatin. (2026, 10 de junio).</span> Perú reforma su régimen de protección de datos personales: qué cambia para las empresas en 2026. <a class="sl-ref__url" href="https://lexlatin.com/reportajes/proteccion-datos-personales-peru-empresas-oficial-cumplimiento-reforma" target="_blank" rel="noopener">https://lexlatin.com/reportajes/proteccion-datos-personales-peru-empresas-oficial-cumplimiento-reforma</a></p>
+        <p><span class="sl-ref__firma">National Institute of Standards and Technology. (2020).</span> NIST Privacy Framework: A tool for improving privacy through enterprise risk management, Version 1.0. U.S. Department of Commerce. <a class="sl-ref__url" href="https://www.nist.gov/privacy-framework/privacy-framework" target="_blank" rel="noopener">https://www.nist.gov/privacy-framework/privacy-framework</a></p>
+        <p><span class="sl-ref__firma">National Institute of Standards and Technology. (2025).</span> NIST Privacy Framework 1.1 (Initial Public Draft, CSWP 40). <a class="sl-ref__url" href="https://csrc.nist.gov/pubs/cswp/40/nist-privacy-framework-11/ipd" target="_blank" rel="noopener">https://csrc.nist.gov/pubs/cswp/40/nist-privacy-framework-11/ipd</a></p>
+        <p><span class="sl-ref__firma">OpenLineage Community. (s. f.).</span> OpenLineage documentation. Consultado el 21 de septiembre de 2026. <a class="sl-ref__url" href="https://openlineage.io/docs/" target="_blank" rel="noopener">https://openlineage.io/docs/</a></p>
+        <p><span class="sl-ref__firma">OpenMetadata. (s. f.).</span> Data lineage. OpenMetadata Documentation. Consultado el 21 de septiembre de 2026. <a class="sl-ref__url" href="https://docs.open-metadata.org/latest/how-to-guides/data-lineage" target="_blank" rel="noopener">https://docs.open-metadata.org/latest/how-to-guides/data-lineage</a></p>
+        <p><span class="sl-ref__firma">Perú. Congreso de la República. (2011, 3 de julio).</span> Ley N.º 29733, Ley de Protección de Datos Personales. Diario Oficial El Peruano.</p>
+        <p><span class="sl-ref__firma">Perú. Ministerio de Justicia y Derechos Humanos. (2024, 30 de noviembre).</span> Decreto Supremo N.º 016-2024-JUS: Reglamento de la Ley N.º 29733, Ley de Protección de Datos Personales. Diario Oficial El Peruano. <a class="sl-ref__url" href="https://www.gob.pe/institucion/anpd/normas-legales/6554453-n-016-2024-jus" target="_blank" rel="noopener">https://www.gob.pe/institucion/anpd/normas-legales/6554453-n-016-2024-jus</a></p>
+        <p><span class="sl-ref__firma">PostgreSQL Global Development Group. (2026).</span> Row security policies. PostgreSQL 18 Documentation. Consultado el 21 de septiembre de 2026. <a class="sl-ref__url" href="https://www.postgresql.org/docs/18/ddl-rowsecurity.html" target="_blank" rel="noopener">https://www.postgresql.org/docs/18/ddl-rowsecurity.html</a></p>
+        <p><span class="sl-ref__firma">Zaharia, M., Chowdhury, M., Das, T., Dave, A., Ma, J., McCauley, M., Franklin, M. J., Shenker, S., y Stoica, I. (2012).</span> Resilient distributed datasets: A fault-tolerant abstraction for in-memory cluster computing. Proceedings of the 9th USENIX Symposium on Networked Systems Design and Implementation, 15–28.</p>
+      </div>
+
+<!-- ova:extras -->
+<style>
+  /* Lista de referencias alineada por completo a la izquierda, sin la sangría
+     francesa de APA: decisión del cliente (confirmada 2026-09-01 en la U1). */
+  .sl-referencias p{
+    padding-left:0; text-indent:0;
+    margin:0 0 22px; line-height:1.65;
+  }
+  /* Viñeta sutil: un punto en violeta atenuado (el tono de las iniciales del glosario). */
+  .sl-referencias p::before{
+    content:'';
+    display:inline-block;
+    width:7px; height:7px;
+    border-radius:50%;
+    background:color-mix(in srgb, var(--c-acento) 38%, transparent);
+    margin-right:12px;
+    vertical-align:.12em;
+  }
+  /* El "asa" de la referencia: autores + año con peso, para escanear la lista */
+  .sl-ref__firma{ font-weight:650; color:var(--text-head); }
+  /* Las URL son enlaces de verdad; largas, así que pueden partirse */
+  .sl-ref__url{
+    color:var(--c-acento);
+    text-decoration:underline;
+    text-decoration-color:color-mix(in srgb, var(--c-acento) 40%, transparent);
+    text-underline-offset:3px;
+    overflow-wrap:anywhere;
+  }
+  .sl-ref__url:hover{ text-decoration-color:var(--c-acento); }
+</style>
